@@ -1,3 +1,11 @@
+# Cindral Official Website
+This is the official website repository for Cindral.
+
+## Populate backend with dummy data
+```powershell
+$response = Invoke-RestMethod -Uri "http://localhost:4000/api/login" -Method Post -Body (@{password="admin123"} | ConvertTo-Json) -ContentType "application/json"; $token = $response.token; Invoke-RestMethod -Uri "http://localhost:4000/api/data/reset" -Method Post -Headers @{Authorization="Bearer $token"}
+```
+
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
