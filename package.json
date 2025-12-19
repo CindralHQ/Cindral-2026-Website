@@ -7,7 +7,10 @@
     "dev": "concurrently -c \"magenta,cyan\" \"npm:dev:server\" \"vite\"",
     "dev:server": "tsx watch server/index.ts",
     "server": "tsx server/index.ts",
-    "build": "vite build",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsup server/src/index.ts --format esm --out-dir dist-server --clean",
+    "start": "node dist-server/index.js",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -28,6 +31,7 @@
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.1",
+    "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"

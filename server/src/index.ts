@@ -38,6 +38,15 @@ app.use('/api', authRoutes);    // /api/login, /api/logout
 app.use('/api', contactRoutes); // /api/contact, /api/contact-submissions
 app.use('/api', clientRoutes);  // /api/client-projects, etc.
 
+// Serve frontend static files
+const distPath = path.resolve(process.cwd(), 'dist');
+app.use(express.static(distPath));
+
+// Handle SPA routing - serve index.html for all non-API routes
+app.get('*', (_req, res) => {
+    res.sendFile(path.join(distPath, 'index.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Cindral API running on http://localhost:${PORT}`);
 });
