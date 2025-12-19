@@ -43,7 +43,7 @@ const distPath = path.resolve(process.cwd(), 'dist');
 app.use(express.static(distPath));
 
 // Handle SPA routing - serve index.html for all non-API routes
-app.get('*', (_req, res) => {
+app.get(/.*/, (_req, res) => {
     res.sendFile(path.join(distPath, 'index.html'));
 });
 

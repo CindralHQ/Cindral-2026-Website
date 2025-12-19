@@ -1555,7 +1555,7 @@ app.use("/api", contactRoutes_default);
 app.use("/api", clientRoutes_default);
 var distPath = path.resolve(process.cwd(), "dist");
 app.use(express9.static(distPath));
-app.get("*", (_req, res) => {
+app.get(/.*/, (_req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 app.listen(PORT, () => {
