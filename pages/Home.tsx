@@ -114,7 +114,7 @@ const Home: React.FC = () => {
                   <div className="relative w-64 h-64 md:w-80 md:h-80 group">
                      <div className="absolute inset-0 bg-green-500 rounded-full blur-[100px] opacity-20 animate-pulse-slow"></div>
                      <img 
-                      src="https://images.unsplash.com/photo-1599598425947-d3368270183b?auto=format&fit=crop&q=80&w=600" 
+                      src="https://i0.wp.com/growing-hobby.com/wp-content/uploads/juniper-bonsai-windswept.png?w=675&ssl=1" 
                       alt="Bonsai" 
                       className="relative w-full h-full object-cover rounded-[2rem] border-2 border-slate-700 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700"
                      />
