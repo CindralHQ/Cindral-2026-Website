@@ -3,7 +3,7 @@ import { Division, DivisionType, Project, TeamMember, CSRStat, Partner, ContactS
 export const BRAND = {
   name: "Cindral",
   logo: {
-    url: "/assets/logo.png",
+    url: "/logo.png",
     alt: "Cindral Logo"
   },
   colors: {
